@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ===== EDIT: page title shown in browser tab ===== -->
   <title>Ashna Mercy — Software Developer</title>
-  <meta name="description" content="Portfolio of Ashna Mercy, software / web developer." />
+  <meta name="description" content="Portfolio of Ashna Mercy — software developer and Electrical & Electronics Engineering graduate based in Kochi, India." />
   <style>
     :root {
       --bg: #ffffff;
@@ -55,7 +54,7 @@
     .hero .eyebrow { color: var(--accent-soft); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.82rem; }
     .hero h1 { font-size: 2.9rem; line-height: 1.1; margin: 12px 0; letter-spacing: -0.02em; }
     .hero .role { font-size: 1.25rem; color: var(--ink-soft); font-weight: 500; }
-    .hero p.lead { margin: 22px 0 30px; max-width: 620px; color: var(--ink-soft); font-size: 1.06rem; }
+    .hero p.lead { margin: 22px 0 30px; max-width: 640px; color: var(--ink-soft); font-size: 1.06rem; }
     .btns { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn {
       display: inline-block; padding: 12px 22px; border-radius: var(--radius); font-weight: 600;
@@ -72,9 +71,9 @@
     @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 24px; } }
     .about p { color: var(--ink-soft); margin-bottom: 14px; }
     .facts { list-style: none; }
-    .facts li { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 0.95rem; }
-    .facts li span:first-child { color: var(--ink-soft); }
-    .facts li span:last-child { font-weight: 600; }
+    .facts li { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; font-size: 0.95rem; }
+    .facts li span:first-child { color: var(--ink-soft); white-space: nowrap; }
+    .facts li span:last-child { font-weight: 600; text-align: right; }
 
     /* ===== Skills ===== */
     .skill-group { margin-bottom: 26px; }
@@ -92,9 +91,8 @@
     .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #d4dae3; }
     .card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--ink); }
     .card p { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 14px; }
-    .card .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .card .tags { display: flex; flex-wrap: wrap; gap: 7px; }
     .card .tags span { font-size: 0.78rem; color: var(--accent-soft); background: var(--bg-alt); padding: 4px 10px; border-radius: 6px; }
-    .card .links a { font-size: 0.9rem; font-weight: 600; margin-right: 18px; }
 
     /* ===== Experience ===== */
     .exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
@@ -109,7 +107,7 @@
     /* ===== Contact ===== */
     .contact { text-align: center; border-bottom: none; }
     .contact h2 { margin-bottom: 14px; }
-    .contact p { color: var(--ink-soft); max-width: 520px; margin: 0 auto 28px; }
+    .contact p { color: var(--ink-soft); max-width: 540px; margin: 0 auto 28px; }
     .social { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 
     footer { text-align: center; padding: 30px 0; color: var(--ink-soft); font-size: 0.85rem; }
@@ -134,21 +132,18 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero" style="border-top:none;">
     <div class="wrap">
-      <div class="eyebrow">Software / Web Developer</div>
-      <!-- ===== EDIT: your name ===== -->
+      <div class="eyebrow">Software Developer</div>
       <h1>Hi, I'm Ashna Mercy.</h1>
-      <!-- ===== EDIT: one-line value proposition ===== -->
       <div class="role">I build clean, reliable web applications.</div>
       <p class="lead">
-        <!-- ===== EDIT: 2–3 sentence intro ===== -->
-        I'm a developer focused on building well-structured, maintainable software
-        with TypeScript, Angular, and Node.js. I care about clear code, good UX,
-        and shipping things that work.
+        Electrical &amp; Electronics Engineering graduate turned software developer.
+        I build web applications with TypeScript, Angular, and Node.js, and I care
+        about clear code, good UX, and growing the teams and products I'm part of.
       </p>
       <div class="btns">
         <a class="btn btn-primary" href="#projects">View my work</a>
-        <!-- ===== EDIT: link your resume PDF or email ===== -->
-        <a class="btn btn-ghost" href="mailto:ashna.mercy@example.com">Get in touch</a>
+        <a class="btn btn-ghost" href="Ashna-Mercy-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        <a class="btn btn-ghost" href="mailto:aashnamercy@gmail.com">Get in touch</a>
       </div>
     </div>
   </section>
@@ -160,20 +155,23 @@
       <p class="section-sub">A little background on who I am and what I do.</p>
       <div class="about-grid">
         <div>
-          <!-- ===== EDIT: your story ===== -->
-          <p>I'm a software developer with a focus on front-end and full-stack web
-          development. I enjoy turning complex problems into simple, intuitive
-          interfaces and writing code that's easy for teams to build on.</p>
-          <p>My core stack is TypeScript, JavaScript, Angular, and Node.js. I'm
-          continually learning new tools and best practices, and I take pride in
-          delivering work that's tested, accessible, and well-documented.</p>
+          <p>I'm a software developer based in Kochi, India, with a B.Tech in
+          Electrical &amp; Electronics Engineering from Mar Athanasius College of
+          Engineering. My engineering background gave me a strong foundation in
+          problem-solving, which I now apply to building web applications.</p>
+          <p>I work primarily with TypeScript, JavaScript, Angular, and Node.js,
+          and have spent my career building maritime SaaS products — including
+          emissions and charter-party features for SmartVoyager and SMARTShip. I'm
+          driven by accelerating my own growth and that of those around me, and I
+          take pride in delivering software that is well-structured, maintainable,
+          and a pleasure to use.</p>
         </div>
         <ul class="facts">
-          <!-- ===== EDIT: quick facts ===== -->
-          <li><span>Location</span><span>Your City, Country</span></li>
+          <li><span>Location</span><span>Kochi, India</span></li>
           <li><span>Focus</span><span>Full-stack Web</span></li>
           <li><span>Main stack</span><span>Angular · Node.js</span></li>
-          <li><span>Availability</span><span>Open to opportunities</span></li>
+          <li><span>Education</span><span>B.Tech EEE</span></li>
+          <li><span>Languages</span><span>English · Hindi · Malayalam</span></li>
         </ul>
       </div>
     </div>
@@ -186,35 +184,48 @@
       <p class="section-sub">Technologies and tools I work with.</p>
 
       <div class="skill-group">
-        <h3>Languages</h3>
+        <h3>Languages &amp; Programming</h3>
         <div class="chips">
           <span class="chip">TypeScript</span>
           <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">C</span>
+          <span class="chip">Kotlin</span>
           <span class="chip">HTML5</span>
           <span class="chip">CSS3</span>
-          <span class="chip">SQL</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <h3>Frameworks & Libraries</h3>
+        <h3>Frameworks &amp; Platforms</h3>
         <div class="chips">
           <span class="chip">Angular</span>
           <span class="chip">Node.js</span>
-          <span class="chip">Express</span>
-          <span class="chip">RxJS</span>
           <span class="chip">REST APIs</span>
+          <span class="chip">Android</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <h3>Tools & Practices</h3>
+        <h3>Tools &amp; Software</h3>
         <div class="chips">
           <span class="chip">Git</span>
-          <span class="chip">CI/CD</span>
-          <span class="chip">Jest / Karma</span>
-          <span class="chip">Agile</span>
-          <span class="chip">Docker</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Proteus</span>
+          <span class="chip">TinkerCad</span>
+          <span class="chip">Microsoft Office</span>
+          <span class="chip">G Suite</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Strengths</h3>
+        <div class="chips">
+          <span class="chip">Leadership</span>
+          <span class="chip">Communication</span>
+          <span class="chip">Flexibility</span>
+          <span class="chip">Management</span>
+          <span class="chip">Systematic approach</span>
         </div>
       </div>
     </div>
@@ -224,51 +235,28 @@
   <section id="projects">
     <div class="wrap">
       <h2>Projects</h2>
-      <p class="section-sub">A selection of things I've built. Replace these with your own.</p>
+      <p class="section-sub">Academic and engineering projects I've built.</p>
       <div class="projects">
 
-        <!-- ===== EDIT: project 1 ===== -->
         <div class="card">
-          <h3>Project One</h3>
-          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
-          <div class="tags"><span>Angular</span><span>Node.js</span><span>REST</span></div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Live demo →</a>
-            <a href="#" target="_blank" rel="noopener">Source →</a>
-          </div>
+          <h3>Drowsy Driver Detection System</h3>
+          <p>A microcontroller-based safety system that detects when a driver is
+          drowsy and brings the vehicle to a stop to prevent accidents.</p>
+          <div class="tags"><span>Microcontrollers</span><span>Embedded</span><span>Sensors</span></div>
         </div>
 
-        <!-- ===== EDIT: project 2 ===== -->
         <div class="card">
-          <h3>Project Two</h3>
-          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
-          <div class="tags"><span>TypeScript</span><span>Express</span></div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Live demo →</a>
-            <a href="#" target="_blank" rel="noopener">Source →</a>
-          </div>
+          <h3>Fastest Finger First</h3>
+          <p>A reaction-time game built with JK flip-flops that measures and compares
+          how quickly players respond in multiplayer activities.</p>
+          <div class="tags"><span>Digital Electronics</span><span>JK Flip-Flops</span></div>
         </div>
 
-        <!-- ===== EDIT: project 3 ===== -->
         <div class="card">
-          <h3>Project Three</h3>
-          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
-          <div class="tags"><span>JavaScript</span><span>API</span></div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Live demo →</a>
-            <a href="#" target="_blank" rel="noopener">Source →</a>
-          </div>
-        </div>
-
-        <!-- ===== EDIT: project 4 ===== -->
-        <div class="card">
-          <h3>Project Four</h3>
-          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
-          <div class="tags"><span>Angular</span><span>RxJS</span></div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Live demo →</a>
-            <a href="#" target="_blank" rel="noopener">Source →</a>
-          </div>
+          <h3>Temperature Monitoring System</h3>
+          <p>A semiconductor-based temperature sensor using a thermostat that produces
+          a linear voltage variation to monitor temperature in real time.</p>
+          <div class="tags"><span>Sensors</span><span>Semiconductors</span></div>
         </div>
 
       </div>
@@ -278,43 +266,56 @@
   <!-- ===================== EXPERIENCE ===================== -->
   <section id="experience">
     <div class="wrap">
-      <h2>Experience</h2>
-      <p class="section-sub">My professional journey so far.</p>
+      <h2>Experience &amp; Education</h2>
+      <p class="section-sub">My journey so far.</p>
 
-      <!-- ===== EDIT: job 1 ===== -->
       <div class="exp-item">
-        <div class="when">2024 — Present</div>
+        <div class="when">Nov 2023 — Jun 2026</div>
         <div>
-          <h3>Software Developer</h3>
-          <div class="org">Company Name</div>
+          <h3>Software Engineer L1</h3>
+          <div class="org">ZeroNorth (formerly Alpha Ori Technologies)</div>
           <ul>
-            <li>Key responsibility or achievement with measurable impact.</li>
-            <li>Another accomplishment — what you built and the result.</li>
+            <li>Developed features for <strong>SMARTShip</strong> and <strong>SmartVoyager</strong>, maritime intelligence products that help shipping operators improve vessel performance and reduce emissions.</li>
+            <li>Built the <strong>Charter Party performance</strong> module — fleet and vessel performance dashboards, scorecards, and voyage-summary views that compare actual performance against contractual terms.</li>
+            <li>Implemented <strong>machinery and weather performance</strong> analytics (engine RPM, fuel consumption, weather and current factors) with interactive vessel route and forecast plotting on maps.</li>
+            <li>Developed a <strong>fuel-model microservice</strong> in Node.js using Redis caching, distributed locking, and scheduled jobs; improved dashboard load times through caching and reduced API calls.</li>
+            <li>Added emissions (CO₂) reporting units and Excel export, and resolved numerous production issues across the platform.</li>
+            <li>Worked across the stack with TypeScript, Angular, and Node.js to deliver reliable, well-tested software.</li>
           </ul>
         </div>
       </div>
 
-      <!-- ===== EDIT: job 2 ===== -->
       <div class="exp-item">
-        <div class="when">2022 — 2024</div>
+        <div class="when">Apr 2023 — Oct 2023</div>
         <div>
-          <h3>Junior Developer</h3>
-          <div class="org">Company Name</div>
+          <h3>Software Engineering Intern</h3>
+          <div class="org">Alpha Ori Technologies</div>
           <ul>
-            <li>Key responsibility or achievement with measurable impact.</li>
-            <li>Another accomplishment — what you built and the result.</li>
+            <li>Contributed to web development projects and grew foundational engineering skills before transitioning to a full-time role.</li>
           </ul>
         </div>
       </div>
 
-      <!-- ===== EDIT: education ===== -->
       <div class="exp-item">
-        <div class="when">2018 — 2022</div>
+        <div class="when">Internship</div>
         <div>
-          <h3>B.Tech / Degree Name</h3>
-          <div class="org">University Name</div>
+          <h3>Engineering Intern</h3>
+          <div class="org">110 kV Substation, KSEB — Muvattupuzha, Kerala</div>
           <ul>
-            <li>Relevant coursework, honors, or activities.</li>
+            <li>Studied substation components, the power distribution pattern, and protection mechanisms.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="when">2019 — 2023</div>
+        <div>
+          <h3>B.Tech, Electrical &amp; Electronics Engineering</h3>
+          <div class="org">Mar Athanasius College of Engineering, Kothamangalam · APJ Abdul Kalam Technological University</div>
+          <ul>
+            <li>CGPA: 8.05</li>
+            <li>Student Representative — Training &amp; Placement Cell and Industry Institute Partnership Cell.</li>
+            <li>Program Committee Coordinator, IEEE MACE Student Branch; Finance Committee Chair, .hack() 2022.</li>
           </ul>
         </div>
       </div>
@@ -325,18 +326,18 @@
   <section id="contact" class="contact">
     <div class="wrap">
       <h2>Get in touch</h2>
-      <p>I'm open to new opportunities and collaborations. Feel free to reach out — I'll get back to you soon.</p>
+      <p>I'm always open to interesting opportunities and collaborations. Feel free
+      to reach out — I'll get back to you soon.</p>
       <div class="social">
-        <!-- ===== EDIT: your links ===== -->
-        <a class="btn btn-primary" href="mailto:ashna.mercy@example.com">Email me</a>
-        <a class="btn btn-ghost" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-primary" href="mailto:aashnamercy@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://github.com/aashnamercy" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/ashna-mercy-5b4b64201" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap">© <span id="year"></span> Ashna Mercy. Built with care.</div>
+    <div class="wrap">© <span id="year"></span> Ashna Mercy.</div>
   </footer>
 
   <script>
