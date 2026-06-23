@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ===== EDIT: page title shown in browser tab ===== -->
+  <title>Ashna Mercy — Software Developer</title>
+  <meta name="description" content="Portfolio of Ashna Mercy, software / web developer." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f5f6f8;
+      --ink: #1a2230;
+      --ink-soft: #4a5568;
+      --accent: #1f3a5f;
+      --accent-soft: #2e5588;
+      --line: #e2e6ec;
+      --max: 980px;
+      --radius: 10px;
+      --shadow: 0 4px 18px rgba(20, 35, 60, 0.07);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-soft); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+    h2 {
+      font-size: 1.7rem; color: var(--accent); margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .section-sub { color: var(--ink-soft); margin-bottom: 34px; font-size: 0.98rem; }
+
+    /* ===== Nav ===== */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .brand { font-weight: 700; color: var(--ink); font-size: 1.05rem; letter-spacing: -0.01em; }
+    .nav-links a { color: var(--ink-soft); margin-left: 24px; font-size: 0.93rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+
+    /* ===== Hero ===== */
+    .hero { padding: 96px 0 84px; background: var(--bg-alt); border-bottom: 1px solid var(--line); }
+    .hero .eyebrow { color: var(--accent-soft); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.82rem; }
+    .hero h1 { font-size: 2.9rem; line-height: 1.1; margin: 12px 0; letter-spacing: -0.02em; }
+    .hero .role { font-size: 1.25rem; color: var(--ink-soft); font-weight: 500; }
+    .hero p.lead { margin: 22px 0 30px; max-width: 620px; color: var(--ink-soft); font-size: 1.06rem; }
+    .btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: var(--radius); font-weight: 600;
+      font-size: 0.95rem; transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-soft); text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--ink); background: #fff; }
+    .btn-ghost:hover { border-color: var(--accent-soft); color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { .hero h1 { font-size: 2.1rem; } }
+
+    /* ===== About ===== */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 24px; } }
+    .about p { color: var(--ink-soft); margin-bottom: 14px; }
+    .facts { list-style: none; }
+    .facts li { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 0.95rem; }
+    .facts li span:first-child { color: var(--ink-soft); }
+    .facts li span:last-child { font-weight: 600; }
+
+    /* ===== Skills ===== */
+    .skill-group { margin-bottom: 26px; }
+    .skill-group h3 { font-size: 1rem; margin-bottom: 12px; color: var(--ink); }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+    .chip { background: var(--bg-alt); border: 1px solid var(--line); padding: 7px 14px; border-radius: 999px; font-size: 0.88rem; color: var(--ink); font-weight: 500; }
+
+    /* ===== Projects ===== */
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    @media (max-width: 720px) { .projects { grid-template-columns: 1fr; } }
+    .card {
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; background: #fff;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #d4dae3; }
+    .card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--ink); }
+    .card p { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 14px; }
+    .card .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .card .tags span { font-size: 0.78rem; color: var(--accent-soft); background: var(--bg-alt); padding: 4px 10px; border-radius: 6px; }
+    .card .links a { font-size: 0.9rem; font-weight: 600; margin-right: 18px; }
+
+    /* ===== Experience ===== */
+    .exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-item .when { color: var(--ink-soft); font-size: 0.9rem; font-weight: 500; }
+    .exp-item h3 { font-size: 1.08rem; margin-bottom: 4px; }
+    .exp-item .org { color: var(--accent-soft); font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; }
+    .exp-item ul { margin-left: 18px; color: var(--ink-soft); font-size: 0.95rem; }
+    .exp-item li { margin-bottom: 5px; }
+    @media (max-width: 600px) { .exp-item { grid-template-columns: 1fr; gap: 6px; } }
+
+    /* ===== Contact ===== */
+    .contact { text-align: center; border-bottom: none; }
+    .contact h2 { margin-bottom: 14px; }
+    .contact p { color: var(--ink-soft); max-width: 520px; margin: 0 auto 28px; }
+    .social { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    footer { text-align: center; padding: 30px 0; color: var(--ink-soft); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <span class="brand">Ashna Mercy</span>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" style="border-top:none;">
+    <div class="wrap">
+      <div class="eyebrow">Software / Web Developer</div>
+      <!-- ===== EDIT: your name ===== -->
+      <h1>Hi, I'm Ashna Mercy.</h1>
+      <!-- ===== EDIT: one-line value proposition ===== -->
+      <div class="role">I build clean, reliable web applications.</div>
+      <p class="lead">
+        <!-- ===== EDIT: 2–3 sentence intro ===== -->
+        I'm a developer focused on building well-structured, maintainable software
+        with TypeScript, Angular, and Node.js. I care about clear code, good UX,
+        and shipping things that work.
+      </p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#projects">View my work</a>
+        <!-- ===== EDIT: link your resume PDF or email ===== -->
+        <a class="btn btn-ghost" href="mailto:ashna.mercy@example.com">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="section-sub">A little background on who I am and what I do.</p>
+      <div class="about-grid">
+        <div>
+          <!-- ===== EDIT: your story ===== -->
+          <p>I'm a software developer with a focus on front-end and full-stack web
+          development. I enjoy turning complex problems into simple, intuitive
+          interfaces and writing code that's easy for teams to build on.</p>
+          <p>My core stack is TypeScript, JavaScript, Angular, and Node.js. I'm
+          continually learning new tools and best practices, and I take pride in
+          delivering work that's tested, accessible, and well-documented.</p>
+        </div>
+        <ul class="facts">
+          <!-- ===== EDIT: quick facts ===== -->
+          <li><span>Location</span><span>Your City, Country</span></li>
+          <li><span>Focus</span><span>Full-stack Web</span></li>
+          <li><span>Main stack</span><span>Angular · Node.js</span></li>
+          <li><span>Availability</span><span>Open to opportunities</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="section-sub">Technologies and tools I work with.</p>
+
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="chips">
+          <span class="chip">TypeScript</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Frameworks & Libraries</h3>
+        <div class="chips">
+          <span class="chip">Angular</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">RxJS</span>
+          <span class="chip">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools & Practices</h3>
+        <div class="chips">
+          <span class="chip">Git</span>
+          <span class="chip">CI/CD</span>
+          <span class="chip">Jest / Karma</span>
+          <span class="chip">Agile</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="section-sub">A selection of things I've built. Replace these with your own.</p>
+      <div class="projects">
+
+        <!-- ===== EDIT: project 1 ===== -->
+        <div class="card">
+          <h3>Project One</h3>
+          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
+          <div class="tags"><span>Angular</span><span>Node.js</span><span>REST</span></div>
+          <div class="links">
+            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+            <a href="#" target="_blank" rel="noopener">Source →</a>
+          </div>
+        </div>
+
+        <!-- ===== EDIT: project 2 ===== -->
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
+          <div class="tags"><span>TypeScript</span><span>Express</span></div>
+          <div class="links">
+            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+            <a href="#" target="_blank" rel="noopener">Source →</a>
+          </div>
+        </div>
+
+        <!-- ===== EDIT: project 3 ===== -->
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
+          <div class="tags"><span>JavaScript</span><span>API</span></div>
+          <div class="links">
+            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+            <a href="#" target="_blank" rel="noopener">Source →</a>
+          </div>
+        </div>
+
+        <!-- ===== EDIT: project 4 ===== -->
+        <div class="card">
+          <h3>Project Four</h3>
+          <p>Short description of what the project does, the problem it solves, and your role in building it.</p>
+          <div class="tags"><span>Angular</span><span>RxJS</span></div>
+          <div class="links">
+            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+            <a href="#" target="_blank" rel="noopener">Source →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="section-sub">My professional journey so far.</p>
+
+      <!-- ===== EDIT: job 1 ===== -->
+      <div class="exp-item">
+        <div class="when">2024 — Present</div>
+        <div>
+          <h3>Software Developer</h3>
+          <div class="org">Company Name</div>
+          <ul>
+            <li>Key responsibility or achievement with measurable impact.</li>
+            <li>Another accomplishment — what you built and the result.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== EDIT: job 2 ===== -->
+      <div class="exp-item">
+        <div class="when">2022 — 2024</div>
+        <div>
+          <h3>Junior Developer</h3>
+          <div class="org">Company Name</div>
+          <ul>
+            <li>Key responsibility or achievement with measurable impact.</li>
+            <li>Another accomplishment — what you built and the result.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== EDIT: education ===== -->
+      <div class="exp-item">
+        <div class="when">2018 — 2022</div>
+        <div>
+          <h3>B.Tech / Degree Name</h3>
+          <div class="org">University Name</div>
+          <ul>
+            <li>Relevant coursework, honors, or activities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>I'm open to new opportunities and collaborations. Feel free to reach out — I'll get back to you soon.</p>
+      <div class="social">
+        <!-- ===== EDIT: your links ===== -->
+        <a class="btn btn-primary" href="mailto:ashna.mercy@example.com">Email me</a>
+        <a class="btn btn-ghost" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Ashna Mercy. Built with care.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
